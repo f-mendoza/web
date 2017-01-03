@@ -1,9 +1,25 @@
 <?php
-class connect{
-  function connect($host,$user,$pass){
-    $connect = mysqli_connect($host,$user,$pass);
-    if(!$connect){
-      echo "ERROR: No se pudo conectar con la base de datos";
+class db{
+  function db($host,$user,$pass,$db){
+    $mysqli = new mysqli($host,$user,$pass,$db);
+    if($mysqli->connect_errno){
+      echo ("ERROR: No se pudo conectar con la base de datos.".$mysqli->connect_errno);
+    }else{
+      if (!$mysqli->query("CREATE TABLE IF NOT EXISTS DOCUMENTS(ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT, TYPE VARCHAR(10) NOT NULL, NUMBER INT NOT NULL)")){
+        echo "ERROR (".$mysqli->error.")";
+      }
+      if(!$mysqli->query("CREATE TABLE IF NOT EXISTS PERSONS(ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT, NAMES VARCHAR(40) NOT NULL, LASTNAMES VARCHAR(40) NOT NULL, MAINDOCUMENT INT NOT NULL, BIRTHDATE DATE NOT NULL, FOREIGN KEY(MAINDOCUMENT) REFERENCES DOCUMENTS(ID))")){
+        echo "ERROR (".$mysqli->error.")";
+      }
+      if(!$mysqli->query("CREATE TABLE IF NOT EXISTS MAILS(ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT, EMAIL VARCHAR (100) NOT NULL, PERSON INT NOT NULL, FOREIGN KEY(PERSON) REFERENCES PERSONS(ID))")){
+        echo "ERROR (".$mysqli->error.")";
+      }
+      if (!$mysqli->query("CREATE TABLE IF NOT EXISTS USERS(ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT, USERNAME VARCHAR(30) NOT NULL, PERSON INT NOT NULL, MAINEMAIL INT NOT NULL, FOREIGN KEY(PERSON) REFERENCES PERSONS(ID), FOREIGN KEY(MAINEMAIL) REFERENCES MAILS(ID))")){
+        echo "ERROR (".$mysqli->error.")";
+      }
+      if (!$mysqli->query("CREATE TABLE IF NOT EXISTS TELEPHONES(ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT, NUMBER VARCHAR(25) NOT NULL,PERSON INT NOT NULL, TYPE VARCHAR(10) NOT NULL, SCHEDULE VARCHAR(255) NOT NULL, FOREIGN KEY(PERSON) REFERENCES PERSONS(ID))")){
+        echo "ERROR (".$mysqli->error.")";
+      }
     }
   }
 }

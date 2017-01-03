@@ -7,7 +7,7 @@
 </head>
 <body>
   <?php
-    $connection = new connect("localhost","root","");
+    $connection = new db("localhost","root","","aov");
    ?>
 </body>
 </html>
