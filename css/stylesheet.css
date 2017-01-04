@@ -1,0 +1,19 @@
+@keyframes buttonAnimation{
+  0% {paddign:10px;}
+  50% {padding:20px;}
+  100% {padding:10px;}
+}
+.boton{
+  background-color:orange;
+  padding:10px;
+  height:40px;
+  width:80px;
+  text-align:center;
+  animation-name: buttonAnimation;
+  animation-duration: 2s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+}
+.boton:hover{
+  animation-play-state: paused;
+}
