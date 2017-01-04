@@ -1,6 +1,6 @@
 <?php
-class db{
-  function db($host,$user,$pass,$db){
+class DBManager{
+  function DBManager($host,$user,$pass,$db){
     $mysqli = new mysqli($host,$user,$pass,$db);
     if($mysqli->connect_errno){
       echo ("ERROR: No se pudo conectar con la base de datos.".$mysqli->connect_errno);
