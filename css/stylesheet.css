@@ -1,19 +1,59 @@
-@keyframes buttonAnimation{
-  0% {paddign:10px;}
-  50% {padding:20px;}
-  100% {padding:10px;}
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/Raleway-Regular.otf);
 }
-.boton{
-  background-color:orange;
-  padding:10px;
-  height:40px;
-  width:80px;
+@font-face {
+  font-family: "Uni Sans";
+  src: url(../fonts/Uni-Sans-Heavy.otf);
+}
+
+.cover{
+  position: relative;
+  background-image: url(../img/background-cover.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  align-items:center;
+  display: flex;
+  justify-content: center;
+  height:400px;
+  box-shadow: 2px 2px 10px #000;
+}
+
+.content {
   text-align:center;
-  animation-name: buttonAnimation;
-  animation-duration: 2s;
-  animation-delay: 5s;
-  animation-iteration-count: infinite;
 }
-.boton:hover{
-  animation-play-state: paused;
+
+.content h1 {
+  font-family:"Uni Sans";
+  color: #D74942;
+  text-shadow: 2px 2px 10px #000;
+  font-size:50px;
+  letter-spacing:5px;
+}
+
+.content h2{
+  font-family:Raleway;
+  letter-spacing:3px;
+  color: white;
+  font-size: 35px;
+  font-weight: normal;
+  text-shadow: 2px 2px 2px #000;
+}
+.info {
+  background-color:#00AAE3;
+  width:100%;
+  height:300px;
+  align-items:center;
+}
+
+.image {
+  text-align: center;
+}
+
+.image img {
+  background-color: #FFF;
+  height:200px;
+  width:200px;
+  border-radius:4px;
+  border: 2px yellow;
 }

@@ -1,15 +1,20 @@
 <html>
 <head>
-  <?php
-    include("classes/DBManager.php");
-   ?>
-   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-  <title>AOV</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  <title>Webpage</title>
 </head>
 <body>
-  <?php
-    $connection = new DBManager("localhost","root","","aov");
-   ?>
-   <div class="boton">Test</div>
+  <div class="cover">
+    <div class="content">
+      <h1>Facundo Mendoza</h1>
+      <h2>Servicio tecnico de PC</h2>
+    </div>
+  </div>
+  <div class="info">
+    <div class="image">
+      <img src="img/sample.png" alt="" />
+    </div>
+  </div>
 </body>
 </html>
