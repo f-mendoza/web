@@ -10,10 +10,6 @@
   font-family: 'Yanone Kaffeesatz';
   src: url(../fonts/YanoneKaffeesatz-Regular.ttf);
 }
-@keyframes changeLinkColor {
-  from{color:white;}
-  to{color:gray;}
-}
 
 .cover{
   position: relative;
@@ -106,8 +102,8 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 
-.contact-info a:hover{
-  animation: changeLinkColor 1s;
+.contact-info a:hover {
+  color:gray;
 }
 
 .contact-info a:active{
