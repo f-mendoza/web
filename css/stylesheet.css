@@ -7,12 +7,12 @@
   src: url(../fonts/Uni-Sans-Heavy.otf);
 }
 @font-face {
-  font-family: Asimov;
-  src: url(../fonts/Asimov.otf);
-}
-@font-face {
   font-family: 'Yanone Kaffeesatz';
   src: url(../fonts/YanoneKaffeesatz-Regular.ttf);
+}
+@keyframes changeLinkColor {
+  from{color:white;}
+  to{color:gray;}
 }
 
 .cover{
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 2px 2px 2px #000;
 }
 .info {
-  background-color:#00AAE3;
+  background-color:#00ADFB;
   width:100%;
   height:250px;
   padding:50px;
@@ -98,6 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 .contact-info i{
   font-size:30px;
   margin-right:15px;
+  margin-left:-40px;
 }
 
 .contact-info a:link, a:visited{
@@ -106,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-info a:hover{
-  color:gray;
+  animation: changeLinkColor 1s;
 }
 
 .contact-info a:active{
