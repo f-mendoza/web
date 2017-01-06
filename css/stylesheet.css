@@ -10,6 +10,18 @@
   font-family: 'Yanone Kaffeesatz';
   src: url(../fonts/YanoneKaffeesatz-Regular.ttf);
 }
+@font-face {
+  font-family:Roboto;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "Josefin Sans Bold";
+  src: url(../fonts/JosefinSans-Bold.ttf);
+}
+@font-face {
+  font-family: Oswald;
+  src: url(../fonts/Oswald-Regular.ttf);
+}
 
 .cover{
   position: relative;
@@ -69,7 +81,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-info {
-  height:250px;
   display:inline-block;
   float:left;
   color:#FFF;
@@ -108,4 +119,54 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-info a:active{
   color:#626266;
+}
+
+.services{
+  background-color:#EBEBEB;
+  text-align:center;
+  align-items:center;
+  padding-top: 20px;
+}
+
+.services h3{
+  font-size: 40px;
+  color: #005787;
+  font-family: Oswald;
+  text-shadow: 1px 1px 5px #213B47;
+}
+
+.services article{
+  width:30%;
+  margin: 30px 5%;
+  background-color: white;
+  display:inline-block;
+  padding:10px;
+}
+
+.article-image {
+  width:140px;
+  height:140px;
+  border:1px solid #C8C8C8;
+  border-radius:100%;
+  float:left;
+  background-color:#F1F1F1;
+}
+
+.article-image img{
+  margin-top:6px;
+  width:128px;
+  height:128px;
+  border-radius:100%;
+}
+
+.article-info h4{
+  font-family:"Josefin Sans Bold";
+  font-size:28px;
+  font-weight:100;
+}
+
+.article-info p{
+  font-family:Roboto;
+  font-size:16px;
+  text-align:left;
 }
