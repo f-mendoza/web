@@ -10,7 +10,6 @@
   font-family: 'Yanone Kaffeesatz';
   src: url(../fonts/YanoneKaffeesatz-Regular.ttf);
 }
-<<<<<<< HEAD
 @font-face {
   font-family:Roboto;
   src: url(../fonts/Roboto-Regular.ttf);
@@ -26,14 +25,14 @@
 
 .cover{
   position: relative;
-  background-image: url(../img/background-cover.jpg);
+  background-image: url(../img/banner.jpg);
   background-size: cover;
   background-attachment: fixed;
   align-items:center;
   display: flex;
   justify-content: center;
   height:400px;
-  box-shadow: 2px 2px 10px #000;
+  box-shadow: 2px 2px 50px #FFF;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -62,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color:#00ADFB;
   width:100%;
   height:250px;
-  padding:50px;
+  padding:50px 0px;
   align-items:center;
 }
 
@@ -79,6 +78,7 @@ h1, h2, h3, h4, h5, h6 {
   width:250px;
   border-radius:4px;
   border: 2px yellow;
+    margin-left:60px;
 }
 
 .contact-info {
@@ -86,6 +86,7 @@ h1, h2, h3, h4, h5, h6 {
   float:left;
   color:#FFF;
   text-shadow: 4px 4px 5px #004860;
+    margin-top:-30px;
 }
 
 .contact-info h3{
@@ -97,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-info li{
-  margin: 4px 0px;
+  margin: 5px 0px;
   font-family: 'Yanone Kaffeesatz', monospace;
   font-size: 25px;
   font-weight: 100px;
@@ -105,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .contact-info i{
   font-size:30px;
-  margin-right:15px;
+  margin-right:20px;
   margin-left:-40px;
 }
 
@@ -115,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-info a:hover {
-  animation: changeLinkColor 0.3s;
+    color: lightcyan;
 }
 
 .contact-info a:active{
@@ -127,6 +128,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align:center;
   align-items:center;
   padding-top: 20px;
+    box-shadow: 2px 2px 5px #FFF;
 }
 
 .services h3{
@@ -137,8 +139,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .services article{
-  width:30%;
-  margin: 30px 5%;
+  width:40%;
+  margin: 30px 3%;
   background-color: white;
   display:inline-block;
   padding:10px;
@@ -151,6 +153,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius:100%;
   float:left;
   background-color:#F1F1F1;
+    margin: 10px;
 }
 
 .article-image img{
@@ -162,12 +165,35 @@ h1, h2, h3, h4, h5, h6 {
 
 .article-info h4{
   font-family:"Josefin Sans Bold";
+  margin:0;
+  text-shadow:3px 3px #F1F1F1;
   font-size:28px;
   font-weight:100;
+  color:#72C3E0;
 }
 
 .article-info p{
   font-family:Roboto;
   font-size:16px;
   text-align:left;
+}
+
+footer{
+    background-color:#1E252A;
+    width:100%;
+    height:20px;
+    padding: 15px 0px;
+    text-align: center;
+    color: #F1F1F1;
+    font-family: Raleway;
+    font-size:14px;
+}
+
+footer a:link, a:visited{
+    color:white;
+    text-decoration:none;
+}
+
+footer a:hover {
+    color:lightblue;
 }
